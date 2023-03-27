@@ -5,15 +5,13 @@ metadata:
 spec:
   containers:
     - image: nginx:1.14.2
-      imagepullpolicy: always
       name: nginx
-      ports:
-      - containerPort: 80
       imagePullPolicy: Always
       resources:
         requests:
           cpu: "150m"
-          memory: "200Mi"
+          memory: "200Mi" 
         limits:
-          cpu: "200m"
+          cpu: "150m"
           memory: "300Mi"
+          
