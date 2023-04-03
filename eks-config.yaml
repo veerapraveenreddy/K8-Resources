@@ -8,7 +8,7 @@ metadata:
 managedNodeGroups:
 
 # `instanceTypes` defaults to [`m5.large`]
-- name: spot-1
+- name: spot-2
   spot: true
   ssh:
     publicKeyName: DockerKubernetes

@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: course-config
 data:
-  course: docker
+  coursename: docker
   duration: 25hrs

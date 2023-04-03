@@ -1,0 +1,27 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: config-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.14.2
+      imagePullPolicy: Always
+      resources:
+        requests:
+          cpu: "250m"
+          memory: "64Mi"
+        limits:
+          cpu: "500m"
+          memory: "128Mi"
+      env:
+        - name: course
+          valueFrom:
+            configMapKeyRef:
+              name: course-config
+              key: coursename
+        - name: duration
+          valueFrom:
+            configMapKeyRef:
+              name: course-config
+              key: duration
